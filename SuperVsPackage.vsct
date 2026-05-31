@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <Extern href="stdidcmd.h"/>
+  <Extern href="vsshlids.h"/>
+
+  <Commands package="guidSuperVsPackage">
+    <Groups>
+      <Group guid="guidSuperVsCmdSet" id="ItemNodeGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+      </Group>
+      <Group guid="guidSuperVsCmdSet" id="ItemNodeUtilityGroup" priority="0x0610">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_ITEMNODE"/>
+      </Group>
+      <Group guid="guidSuperVsCmdSet" id="ProjectNodeGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE"/>
+      </Group>
+      <Group guid="guidSuperVsCmdSet" id="ProjectNodeUtilityGroup" priority="0x0610">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_PROJNODE"/>
+      </Group>
+      <Group guid="guidSuperVsCmdSet" id="FolderNodeGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_FOLDERNODE"/>
+      </Group>
+      <Group guid="guidSuperVsCmdSet" id="FolderNodeUtilityGroup" priority="0x0610">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_CTXT_FOLDERNODE"/>
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidSuperVsCmdSet" id="OpenCodexCommandId" priority="0x0100" type="Button">
+        <Parent guid="guidSuperVsCmdSet" id="ItemNodeGroup" />
+        <Icon guid="guidChatGptImages" id="bmpChatGpt" />
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Codex</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidSuperVsCmdSet" id="OpenClaudeCommandId" priority="0x0101" type="Button">
+        <Parent guid="guidSuperVsCmdSet" id="ItemNodeGroup" />
+        <Icon guid="guidClaudeImages" id="bmpClaude" />
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Claude</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidSuperVsCmdSet" id="OpenAntigravityCommandId" priority="0x0102" type="Button">
+        <Parent guid="guidSuperVsCmdSet" id="ItemNodeGroup" />
+        <Icon guid="guidAntigravityImages" id="bmpAntigravity" />
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Antigravity</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidSuperVsCmdSet" id="OpenQwenCommandId" priority="0x0103" type="Button">
+        <Parent guid="guidSuperVsCmdSet" id="ItemNodeGroup" />
+        <Icon guid="guidQwenImages" id="bmpQwen" />
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Qwen</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidSuperVsCmdSet" id="CopyRelativePathCommandId" priority="0x0110" type="Button">
+        <Parent guid="guidSuperVsCmdSet" id="ItemNodeUtilityGroup" />
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Copy Relative Path</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidSuperVsCmdSet" id="ExecuteCmdCommandId" priority="0x0120" type="Button">
+        <Parent guid="guidSuperVsCmdSet" id="ItemNodeUtilityGroup" />
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Execute CMD</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidSuperVsCmdSet" id="FtpUploadCommandId" priority="0x0130" type="Button">
+        <Parent guid="guidSuperVsCmdSet" id="ItemNodeUtilityGroup" />
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Invoke FTP</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+
+    <Bitmaps>
+      <Bitmap guid="guidChatGptImages" href="resources\chatgpt16.png" usedList="bmpChatGpt" />
+      <Bitmap guid="guidClaudeImages" href="resources\claude.ico" usedList="bmpClaude" />
+      <Bitmap guid="guidAntigravityImages" href="resources\antigravity16.png" usedList="bmpAntigravity" />
+      <Bitmap guid="guidQwenImages" href="resources\qwen.ico" usedList="bmpQwen" />
+    </Bitmaps>
+  </Commands>
+
+  <CommandPlacements>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="OpenCodexCommandId" priority="0x0100">
+      <Parent guid="guidSuperVsCmdSet" id="ProjectNodeGroup" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="OpenClaudeCommandId" priority="0x0101">
+      <Parent guid="guidSuperVsCmdSet" id="ProjectNodeGroup" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="OpenAntigravityCommandId" priority="0x0102">
+      <Parent guid="guidSuperVsCmdSet" id="ProjectNodeGroup" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="OpenQwenCommandId" priority="0x0103">
+      <Parent guid="guidSuperVsCmdSet" id="ProjectNodeGroup" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="CopyRelativePathCommandId" priority="0x0110">
+      <Parent guid="guidSuperVsCmdSet" id="ProjectNodeUtilityGroup" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="OpenCodexCommandId" priority="0x0100">
+      <Parent guid="guidSuperVsCmdSet" id="FolderNodeGroup" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="OpenClaudeCommandId" priority="0x0101">
+      <Parent guid="guidSuperVsCmdSet" id="FolderNodeGroup" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="OpenAntigravityCommandId" priority="0x0102">
+      <Parent guid="guidSuperVsCmdSet" id="FolderNodeGroup" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="OpenQwenCommandId" priority="0x0103">
+      <Parent guid="guidSuperVsCmdSet" id="FolderNodeGroup" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="CopyRelativePathCommandId" priority="0x0110">
+      <Parent guid="guidSuperVsCmdSet" id="FolderNodeUtilityGroup" />
+    </CommandPlacement>
+  </CommandPlacements>
+
+  <Symbols>
+    <GuidSymbol name="guidSuperVsPackage" value="{4f0066d4-ef76-4fa1-9491-fd87f39d6b87}" />
+    <GuidSymbol name="guidSuperVsCmdSet" value="{8e1a11a1-eaf8-491f-9155-e899028fe36a}">
+      <IDSymbol name="ItemNodeGroup" value="0x1020" />
+      <IDSymbol name="ProjectNodeGroup" value="0x1021" />
+      <IDSymbol name="FolderNodeGroup" value="0x1022" />
+      <IDSymbol name="ItemNodeUtilityGroup" value="0x1023" />
+      <IDSymbol name="ProjectNodeUtilityGroup" value="0x1024" />
+      <IDSymbol name="FolderNodeUtilityGroup" value="0x1025" />
+      <IDSymbol name="OpenCodexCommandId" value="0x0100" />
+      <IDSymbol name="OpenClaudeCommandId" value="0x0101" />
+      <IDSymbol name="OpenAntigravityCommandId" value="0x0102" />
+      <IDSymbol name="OpenQwenCommandId" value="0x0103" />
+      <IDSymbol name="CopyRelativePathCommandId" value="0x0110" />
+      <IDSymbol name="ExecuteCmdCommandId" value="0x0120" />
+      <IDSymbol name="FtpUploadCommandId" value="0x0130" />
+    </GuidSymbol>
+    <GuidSymbol name="guidChatGptImages" value="{7bd1125c-83ab-4951-8373-a462da788108}">
+      <IDSymbol name="bmpChatGpt" value="1" />
+    </GuidSymbol>
+    <GuidSymbol name="guidClaudeImages" value="{cc3fbb6d-35cd-49c7-a007-f3368df6ca54}">
+      <IDSymbol name="bmpClaude" value="1" />
+    </GuidSymbol>
+    <GuidSymbol name="guidAntigravityImages" value="{e7ab6d6c-67ad-4d9d-9051-409df8c991a0}">
+      <IDSymbol name="bmpAntigravity" value="1" />
+    </GuidSymbol>
+    <GuidSymbol name="guidQwenImages" value="{acb4d34f-21f4-4f55-8141-8618c6fef18d}">
+      <IDSymbol name="bmpQwen" value="1" />
+    </GuidSymbol>
+  </Symbols>
+</CommandTable>
