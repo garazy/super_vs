@@ -62,6 +62,24 @@
           <ButtonText>Qwen</ButtonText>
         </Strings>
       </Button>
+      <Button guid="guidSuperVsCmdSet" id="OpenVibeCommandId" priority="0x0104" type="Button">
+        <Parent guid="guidSuperVsCmdSet" id="ItemNodeGroup" />
+        <Icon guid="guidVibeImages" id="bmpVibe" />
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Vibe</ButtonText>
+        </Strings>
+      </Button>
+      <Button guid="guidSuperVsCmdSet" id="OpenNanocoderCommandId" priority="0x0105" type="Button">
+        <Parent guid="guidSuperVsCmdSet" id="ItemNodeGroup" />
+        <Icon guid="guidNanocoderImages" id="bmpNanocoder" />
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <Strings>
+          <ButtonText>Nanocoder</ButtonText>
+        </Strings>
+      </Button>
       <Button guid="guidSuperVsCmdSet" id="CopyRelativePathCommandId" priority="0x0110" type="Button">
         <Parent guid="guidSuperVsCmdSet" id="ItemNodeUtilityGroup" />
         <CommandFlag>DefaultInvisible</CommandFlag>
@@ -89,10 +107,12 @@
     </Buttons>
 
     <Bitmaps>
-      <Bitmap guid="guidChatGptImages" href="resources\chatgpt16.png" usedList="bmpChatGpt" />
-      <Bitmap guid="guidClaudeImages" href="resources\claude.ico" usedList="bmpClaude" />
-      <Bitmap guid="guidAntigravityImages" href="resources\antigravity16.png" usedList="bmpAntigravity" />
-      <Bitmap guid="guidQwenImages" href="resources\qwen.ico" usedList="bmpQwen" />
+      <Bitmap guid="guidChatGptImages" href="resources\\chatgpt16.png" usedList="bmpChatGpt" />
+      <Bitmap guid="guidClaudeImages" href="resources\\claude.ico" usedList="bmpClaude" />
+      <Bitmap guid="guidAntigravityImages" href="resources\\antigravity16.png" usedList="bmpAntigravity" />
+      <Bitmap guid="guidQwenImages" href="resources\\qwen.ico" usedList="bmpQwen" />
+      <Bitmap guid="guidVibeImages" href="resources\\mistral.png" usedList="bmpVibe" />
+      <Bitmap guid="guidNanocoderImages" href="resources\\nanocoder.ico" usedList="bmpNanocoder" />
     </Bitmaps>
   </Commands>
 
@@ -109,6 +129,12 @@
     <CommandPlacement guid="guidSuperVsCmdSet" id="OpenQwenCommandId" priority="0x0103">
       <Parent guid="guidSuperVsCmdSet" id="ProjectNodeGroup" />
     </CommandPlacement>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="OpenVibeCommandId" priority="0x0104">
+      <Parent guid="guidSuperVsCmdSet" id="ProjectNodeGroup" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="OpenNanocoderCommandId" priority="0x0105">
+      <Parent guid="guidSuperVsCmdSet" id="ProjectNodeGroup" />
+    </CommandPlacement>
     <CommandPlacement guid="guidSuperVsCmdSet" id="CopyRelativePathCommandId" priority="0x0110">
       <Parent guid="guidSuperVsCmdSet" id="ProjectNodeUtilityGroup" />
     </CommandPlacement>
@@ -122,6 +148,12 @@
       <Parent guid="guidSuperVsCmdSet" id="FolderNodeGroup" />
     </CommandPlacement>
     <CommandPlacement guid="guidSuperVsCmdSet" id="OpenQwenCommandId" priority="0x0103">
+      <Parent guid="guidSuperVsCmdSet" id="FolderNodeGroup" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="OpenVibeCommandId" priority="0x0104">
+      <Parent guid="guidSuperVsCmdSet" id="FolderNodeGroup" />
+    </CommandPlacement>
+    <CommandPlacement guid="guidSuperVsCmdSet" id="OpenNanocoderCommandId" priority="0x0105">
       <Parent guid="guidSuperVsCmdSet" id="FolderNodeGroup" />
     </CommandPlacement>
     <CommandPlacement guid="guidSuperVsCmdSet" id="CopyRelativePathCommandId" priority="0x0110">
@@ -142,6 +174,8 @@
       <IDSymbol name="OpenClaudeCommandId" value="0x0101" />
       <IDSymbol name="OpenAntigravityCommandId" value="0x0102" />
       <IDSymbol name="OpenQwenCommandId" value="0x0103" />
+      <IDSymbol name="OpenVibeCommandId" value="0x0104" />
+      <IDSymbol name="OpenNanocoderCommandId" value="0x0105" />
       <IDSymbol name="CopyRelativePathCommandId" value="0x0110" />
       <IDSymbol name="ExecuteCmdCommandId" value="0x0120" />
       <IDSymbol name="FtpUploadCommandId" value="0x0130" />
@@ -157,6 +191,12 @@
     </GuidSymbol>
     <GuidSymbol name="guidQwenImages" value="{acb4d34f-21f4-4f55-8141-8618c6fef18d}">
       <IDSymbol name="bmpQwen" value="1" />
+    </GuidSymbol>
+    <GuidSymbol name="guidVibeImages" value="{5d9f2b4a-8c7d-4e2f-8a3b-9f2e4d6c7a1b}">
+      <IDSymbol name="bmpVibe" value="1" />
+    </GuidSymbol>
+    <GuidSymbol name="guidNanocoderImages" value="{6e8a3c5d-7b2e-4f9a-8d1c-2e3f4a5b6c7d}">
+      <IDSymbol name="bmpNanocoder" value="1" />
     </GuidSymbol>
   </Symbols>
 </CommandTable>

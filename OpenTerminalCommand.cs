@@ -15,6 +15,8 @@ namespace SuperVs
         public const int OpenClaudeCommandId = 0x0101;
         public const int OpenAntigravityCommandId = 0x0102;
         public const int OpenQwenCommandId = 0x0103;
+        public const int OpenVibeCommandId = 0x0104;
+        public const int OpenNanocoderCommandId = 0x0105;
 
         public static readonly Guid CommandSet = new Guid("8e1a11a1-eaf8-491f-9155-e899028fe36a");
 
@@ -31,6 +33,8 @@ namespace SuperVs
             AddCommand(commandService, OpenClaudeCommandId, "Claude");
             AddCommand(commandService, OpenAntigravityCommandId, "Antigravity");
             AddCommand(commandService, OpenQwenCommandId, "Qwen");
+            AddCommand(commandService, OpenVibeCommandId, "Vibe");
+            AddCommand(commandService, OpenNanocoderCommandId, "Nanocoder");
         }
 
         public static OpenTerminalCommand Instance { get; private set; }

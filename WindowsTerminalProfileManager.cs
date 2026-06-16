@@ -14,6 +14,8 @@ namespace SuperVs
         private const string ClaudeGuid = "{d93ab165-f0b6-4b5b-b2e6-890c268a8d06}";
         private const string AntigravityGuid = "{d91b490f-071a-4c28-98e3-0d53347b74bd}";
         private const string QwenGuid = "{cb5dbb04-b538-4efa-80f0-c7eb0f1d8ed1}";
+        private const string VibeGuid = "{7e2a5c3d-4b1e-4e9a-8c7d-3f2e6a4b5c1d}";
+        private const string NanocoderGuid = "{8f3b6d4e-5a2c-4d8e-9b1f-4c3d5e6f7a2b}";
 
         private static readonly object SyncRoot = new object();
         private static bool ensured;
@@ -65,6 +67,8 @@ namespace SuperVs
             changed |= EnsureProfile(profiles, CreateClaudeProfile());
             changed |= EnsureProfile(profiles, CreateAntigravityProfile());
             changed |= EnsureProfile(profiles, CreateQwenProfile());
+            changed |= EnsureProfile(profiles, CreateVibeProfile());
+            changed |= EnsureProfile(profiles, CreateNanocoderProfile());
 
             if (!changed)
             {
@@ -164,6 +168,16 @@ namespace SuperVs
         private static JObject CreateQwenProfile()
         {
             return CreateProfile("Qwen", QwenGuid, "cmd.exe /k qwen", ResolveIconPath("qwen.ico"), "#8B5CF6");
+        }
+
+        private static JObject CreateVibeProfile()
+        {
+            return CreateProfile("Vibe", VibeGuid, "%USERPROFILE%\\.local\\bin\\vibe.exe", ResolveIconPath("mistral.png"), "#7C3AED");
+        }
+
+        private static JObject CreateNanocoderProfile()
+        {
+            return CreateProfile("Nanocoder", NanocoderGuid, "%USERPROFILE%\\AppData\\Roaming\\npm\\anocoder.npm", ResolveIconPath("nanocoder.ico"), "#3B82F6");
         }
 
         private static JObject CreateProfile(string name, string guid, string commandline, string iconPath, string tabColor)
