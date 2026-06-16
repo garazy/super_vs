@@ -111,7 +111,7 @@
       <Bitmap guid="guidClaudeImages" href="resources\\claude.ico" usedList="bmpClaude" />
       <Bitmap guid="guidAntigravityImages" href="resources\\antigravity16.png" usedList="bmpAntigravity" />
       <Bitmap guid="guidQwenImages" href="resources\\qwen.ico" usedList="bmpQwen" />
-      <Bitmap guid="guidVibeImages" href="resources\\mistral.png" usedList="bmpVibe" />
+      <Bitmap guid="guidVibeImages" href="resources\\mistral16.png" usedList="bmpVibe" />
       <Bitmap guid="guidNanocoderImages" href="resources\\nanocoder.ico" usedList="bmpNanocoder" />
     </Bitmaps>
   </Commands>
